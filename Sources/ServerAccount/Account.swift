@@ -177,7 +177,7 @@ public enum GenerateTokensError : Swift.Error {
 }
 
 // I didn't just use a protocol extension for this because I want to be able to override `apiCall` and call "super" to get the base definition.
-public class AccountAPICall {
+open class AccountAPICall {
     // Used by `apiCall` function to make a REST call to an Account service.
     var baseURL:String?
     
