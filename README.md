@@ -1,2 +1,3 @@
 # ServerAccount
-Protocols and other support for generic accounts on SyncServerII
+
+A description of this package.
