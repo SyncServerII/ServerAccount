@@ -222,7 +222,7 @@ open class AccountAPICall {
     
     // Does an HTTP call to the endpoint constructed by baseURL with path, the HTTP method, and the given body parameters (if any). BaseURL is given without any http:// or https:// (https:// is used). If baseURL is nil, then self.baseURL is used-- which must not be nil in that case.
     // expectingData == true means return Data. false or nil just look for Data or JSON result.
-    public func apiCall(method:String, baseURL:String? = nil, path:String,
+    open func apiCall(method:String, baseURL:String? = nil, path:String,
                  additionalHeaders: [String:String]? = nil, additionalOptions: [ClientRequest.Options] = [], urlParameters:String? = nil,
                  body:APICallBody? = nil,
                  returnResultWhenNon200Code:Bool = true,
