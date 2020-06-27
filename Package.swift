@@ -6,21 +6,22 @@ import PackageDescription
 let package = Package(
     name: "ServerAccount",
     products: [
-        // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
             name: "ServerAccount",
             targets: ["ServerAccount"]),
     ],
     dependencies: [
         .package(url: "https://github.com/SyncServerII/ServerShared.git", .branch("master")),
-
+        .package(url: "https://github.com/IBM-Swift/Kitura-Credentials.git", from: "2.5.0"),
+        .package(url: "https://github.com/IBM-Swift/Kitura.git", from: "2.9.1"),
+        .package(url: "https://github.com/IBM-Swift/HeliumLogger.git", from: "1.8.1"),
     ],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "ServerAccount",
-            dependencies: ["ServerShared"]),
+            dependencies: ["ServerShared", "Kitura", "HeliumLogger",
+                .product(name: "Credentials", package: "Kitura-Credentials"),
+            ]),
         .testTarget(
             name: "ServerAccountTests",
             dependencies: ["ServerAccount"]),
