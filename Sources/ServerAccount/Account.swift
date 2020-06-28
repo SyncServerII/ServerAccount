@@ -184,7 +184,7 @@ open class AccountAPICall {
     // Used by `apiCall` function to make a REST call to an Account service.
     public var baseURL:String?
     
-    public required init?() {}
+    public init?() {}
     
     private func parseResponse(_ response: ClientResponse, expectedBody: ExpectedResponse?, errorIfParsingFailure: Bool = false) -> APICallResult? {
         var result:APICallResult?
