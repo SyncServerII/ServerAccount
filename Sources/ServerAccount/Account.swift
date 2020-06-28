@@ -60,6 +60,9 @@ public protocol Account {
     // Currently assuming all Account's use access tokens.
     var accessToken: String! {get set}
     
+    // configuration must abide by type defined by the specific Account.
+    init?(configuration: Any)
+    
     func canCreateAccount(with userProfile: UserProfile) -> Bool
     
     func toJSON() -> String?
