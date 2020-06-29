@@ -11,7 +11,7 @@ let package = Package(
             targets: ["ServerAccount"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/SyncServerII/ServerShared.git", .branch("master")),
+        .package(url: "https://github.com/SyncServerII/ServerShared.git", from: "0.0.1"),
         .package(url: "https://github.com/IBM-Swift/Kitura-Credentials.git", from: "2.5.0"),
         .package(url: "https://github.com/IBM-Swift/Kitura.git", from: "2.9.1"),
         .package(url: "https://github.com/IBM-Swift/HeliumLogger.git", from: "1.8.1"),
