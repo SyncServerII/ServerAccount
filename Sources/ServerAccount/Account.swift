@@ -79,8 +79,8 @@ public protocol Account {
     // Gets account specific properties, if any, from the headers.
     static func getProperties(fromHeaders headers:AccountHeaders) -> [String: Any]
     
-    static func fromProperties(_ properties: AccountProperties, user:AccountCreationUser?, delegate:AccountDelegate?) -> Account?
-    static func fromJSON(_ json:String, user:AccountCreationUser, delegate:AccountDelegate?) throws -> Account?
+    static func fromProperties(_ properties: AccountProperties, user:AccountCreationUser?, configuration: Any?, delegate:AccountDelegate?) -> Account?
+    static func fromJSON(_ json:String, user:AccountCreationUser, configuration: Any?, delegate:AccountDelegate?) throws -> Account?
 }
 
 public enum FromJSONError : Swift.Error {
