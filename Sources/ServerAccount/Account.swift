@@ -74,6 +74,7 @@ public protocol Account {
     /// Some Account's (e.g., Google) need to generate internal tokens (e.g., a refresh token) in some circumstances (e.g., when having a serverAuthCode). May use delegate, if one is defined, to save creds to database.
     func generateTokens(completion:@escaping (Swift.Error?)->())
     
+    /// Changes `self` to update from the newer account, as needed.
     func merge(withNewer account:Account)
 
     // Gets account specific properties, if any, from the headers.
