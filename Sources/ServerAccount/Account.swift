@@ -52,16 +52,14 @@ public protocol Account {
     // Sharing always need to return false.
     // Owning accounts return true iff they need a cloud folder name (e.g., Google Drive).
     var owningAccountsNeedCloudFolderName: Bool {get}
-    
-    var delegate:AccountDelegate? {get set}
-    
+        
     var accountCreationUser:AccountCreationUser? {get set}
     
     // Currently assuming all Account's use access tokens.
     var accessToken: String! {get set}
     
     // If needed, configuration must abide by type defined by the specific Account.
-    init?(configuration: Any?)
+    init?(configuration: Any?, delegate: AccountDelegate?)
     
     func canCreateAccount(with userProfile: UserProfile) -> Bool
     
