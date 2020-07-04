@@ -16,7 +16,10 @@ import HeliumLogger
 public protocol UserData {
     var cloudFolderName: String? { get }
     var accountType: AccountScheme.AccountName! { get }
-    var credsObject:Account? { get }
+    
+    // JSON Credentials
+    var creds:String! { get }
+    
     var userId: UserId! { get }
 }
 
