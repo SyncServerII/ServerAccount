@@ -52,7 +52,7 @@ public protocol Account {
     static var accountScheme:AccountScheme {get}
     var accountScheme:AccountScheme {get}
     
-    // Sharing always need to return false.
+    // Sharing accounts (e.g., Facebook) always need to return false.
     // Owning accounts return true iff they need a cloud folder name (e.g., Google Drive).
     var owningAccountsNeedCloudFolderName: Bool {get}
         
