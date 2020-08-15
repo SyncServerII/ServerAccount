@@ -154,12 +154,6 @@ public extension Account {
     }
 }
 
-public extension Account {
-    var cloudStorage:CloudStorage? {
-        return self as? CloudStorage
-    }
-}
-
 public enum APICallBody {
     case string(String)
     case data(Data)
