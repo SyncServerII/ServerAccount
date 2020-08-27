@@ -8,10 +8,13 @@
 import Foundation
 import ServerShared
 import Credentials
-import KituraNet
+
+#if os(Linux) || SERVER
 import LoggerAPI
 import Kitura
+import KituraNet
 import HeliumLogger
+#endif
 
 public protocol UserData {
     var cloudFolderName: String? { get }
@@ -88,6 +91,8 @@ public protocol Account {
 public enum FromJSONError : Swift.Error {
     case noRequiredKeyValue
 }
+
+#if os(Linux) || SERVER
 
 public extension Account {
     func canCreateAccount(with userProfile: UserProfile) -> Bool {
@@ -305,3 +310,4 @@ open class AccountAPICall {
     }
 }
 
+#endif
