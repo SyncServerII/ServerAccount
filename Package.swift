@@ -25,7 +25,7 @@ let package = Package(
                 "ServerShared",
                 .product(name: "Kitura", package: "Kitura", condition: .when(platforms: [.linux])),
                 .product(name: "HeliumLogger", package: "HeliumLogger", condition: .when(platforms: [.linux])),
-                .product(name: "Credentials", package: "Kitura-Credentials"),
+                .product(name: "Credentials", package: "Kitura-Credentials", condition: .when(platforms: [.linux])),
             ]),
         .testTarget(
             name: "ServerAccountTests",
