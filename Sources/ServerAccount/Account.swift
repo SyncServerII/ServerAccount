@@ -5,16 +5,15 @@
 //  Created by Christopher Prince on 7/9/17.
 //
 
+#if os(Linux) || SERVER
+
 import Foundation
 import ServerShared
-import Credentials
-
-#if os(Linux) || SERVER
 import LoggerAPI
 import Kitura
 import KituraNet
 import HeliumLogger
-#endif
+import Credentials
 
 public protocol UserData {
     var cloudFolderName: String? { get }
@@ -91,8 +90,6 @@ public protocol Account {
 public enum FromJSONError : Swift.Error {
     case noRequiredKeyValue
 }
-
-#if os(Linux) || SERVER
 
 public extension Account {
     func canCreateAccount(with userProfile: UserProfile) -> Bool {

@@ -101,21 +101,12 @@
         }
       },
       {
-        "package": "PerfectLib",
-        "repositoryURL": "https://github.com/PerfectlySoft/Perfect.git",
-        "state": {
-          "branch": null,
-          "revision": "5a08c2a596df23a3ae30b6ac9cb509a38384166c",
-          "version": "3.1.4"
-        }
-      },
-      {
         "package": "ServerShared",
         "repositoryURL": "https://github.com/SyncServerII/ServerShared.git",
         "state": {
-          "branch": null,
-          "revision": "221ff936bfcc5d198011dc3f8ca2b2da7c8d7716",
-          "version": "0.0.1"
+          "branch": "master",
+          "revision": "92b304d9051754fe652524bd6bedda0a60ac05a9",
+          "version": null
         }
       },
       {
