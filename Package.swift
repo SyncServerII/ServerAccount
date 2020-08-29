@@ -23,6 +23,7 @@ let package = Package(
             name: "ServerAccount",
             dependencies: [
                 "ServerShared",
+                // For new condition feature, see https://forums.swift.org/t/package-manager-conditional-target-dependencies/31306/26
                 .product(name: "Kitura", package: "Kitura", condition: .when(platforms: [.linux])),
                 .product(name: "HeliumLogger", package: "HeliumLogger", condition: .when(platforms: [.linux])),
                 .product(name: "Credentials", package: "Kitura-Credentials", condition: .when(platforms: [.linux])),
