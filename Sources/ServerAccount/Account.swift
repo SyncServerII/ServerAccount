@@ -66,6 +66,7 @@ public protocol Account {
     // If needed, configuration must abide by type defined by the specific Account.
     init?(configuration: Any?, delegate: AccountDelegate?)
     
+    // Optional method. Default implementation always returns true.
     func canCreateAccount(with userProfile: UserProfile) -> Bool
     
     func toJSON() -> String?
