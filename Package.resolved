@@ -104,9 +104,9 @@
         "package": "ServerShared",
         "repositoryURL": "https://github.com/SyncServerII/ServerShared.git",
         "state": {
-          "branch": "master",
-          "revision": "92b304d9051754fe652524bd6bedda0a60ac05a9",
-          "version": null
+          "branch": null,
+          "revision": "b2b65a1942d3d8506379841ebef276dd32f7c1fb",
+          "version": "0.0.3"
         }
       },
       {

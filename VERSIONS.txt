@@ -1,4 +1,7 @@
 ServerAccount
+
+Version 0.0.6 (12/24/20)
+	* Update package version.
 	
 Version 0.0.5 (12/23/20)
 	* Trying to resolve SPM issue.
