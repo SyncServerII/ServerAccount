@@ -136,11 +136,11 @@ public extension Account {
     static func setProperty(jsonDict: [String:Any], key:String, required:Bool=true, setWithValue:(String)->()) throws {
         guard let keyValue = jsonDict[key] as? String else {
             if required {
-                Log.error("No \(key) value present.")
+                Log.error("No \(key) value present: \(jsonDict)")
                 throw FromJSONError.noRequiredKeyValue
             }
             else {
-                Log.warning("No \(key) value present.")
+                Log.warning("No \(key) value present: \(jsonDict)")
             }
             return
         }
