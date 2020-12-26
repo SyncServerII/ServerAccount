@@ -26,6 +26,10 @@ let package = Package(
                 .product(name: "Kitura", package: "Kitura", condition: .when(platforms: [.linux, .macOS])),
                 .product(name: "HeliumLogger", package: "HeliumLogger", condition: .when(platforms: [.linux, .macOS])),
                 .product(name: "Credentials", package: "Kitura-Credentials", condition: .when(platforms: [.linux, .macOS])),
+            ],
+            swiftSettings: [
+                // So I can do basic development and editing with this on Mac OS. Otherwise if some dependent library uses this it will not get Account related code. See Account.swift.
+                .define("SERVER", .when(platforms: [.macOS], configuration: .debug)),
             ]),
         .testTarget(
             name: "ServerAccountTests",
