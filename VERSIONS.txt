@@ -1,5 +1,8 @@
 ServerAccount
 
+Version 0.0.8 (1/23/21)
+    Starting beta testing
+    
 Version 0.0.7 (12/25/20)
 	* Fixed Package.swift issue to allow Mac OS debugging using this package.
 	
