@@ -30,7 +30,7 @@ public enum AccountCreationUser {
     case userId(UserId) // and this if we don't.
 }
 
-public protocol AccountDelegate : class {
+public protocol AccountDelegate : AnyObject {
     // This is delegated because (a) it enables me to only sometimes allow an Account to save to the database, and (b) because knowledge of how to save to a database seems outside of the responsibilities of `Account`s. Returns false iff an error occurred on database save.
     func saveToDatabase(account:Account) -> Bool
 }
@@ -82,7 +82,7 @@ public protocol Account {
     func merge(withNewer account:Account)
 
     // Gets account specific properties, if any, from the headers.
-    static func getProperties(fromHeaders headers:AccountHeaders) -> [String: Any]
+    static func getProperties(fromHeaders headers:AccountHeaders) throws -> [String: Any]
     
     static func fromProperties(_ properties: AccountProperties, user:AccountCreationUser?, configuration: Any?, delegate:AccountDelegate?) -> Account?
     static func fromJSON(_ json:String, user:AccountCreationUser, configuration: Any?, delegate:AccountDelegate?) throws -> Account?

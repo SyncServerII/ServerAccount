@@ -1,5 +1,8 @@
 ServerAccount
 
+Version 0.0.9 (7/31/21)
+    Added `throws` to getProperties
+    
 Version 0.0.8 (1/23/21)
     Starting beta testing
     
