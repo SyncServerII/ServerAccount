@@ -1,5 +1,8 @@
 ServerAccount
 
+Version 0.0.10 (8/4/21)
+    Remove `throws` from getProperties; temporarily. Have another fix I need to do before this.
+    
 Version 0.0.9 (7/31/21)
     Added `throws` to getProperties
     
